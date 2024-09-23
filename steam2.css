@@ -1,0 +1,43 @@
+#anima2 {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    position: absolute;
+    z-index: -100;
+
+}
+
+#anima2 span {
+    position: relative;
+    bottom: 500px;
+    margin: 0 100px 20px;
+    width: 40vw;
+    min-height: 300px;
+    background: grey;
+    border-radius: 80%;
+    animation: animate 10s linear infinite;
+    opacity: 0;
+    filter: blur(40px);
+    animation-delay: calc(var(--i) * 1s);
+    z-index: -100;
+
+}
+
+@keyframes animate { 
+    0% { 
+    transform: translateY(400px) scaleX(1); 
+    opacity: 0; 
+    } 
+    15% { 
+    opacity: 0.4; 
+    } 
+    50% { 
+    transform: translateY(-75px) scaleX(4); 
+    } 
+    95% { 
+    opacity: 0; 
+    } 
+    100% { 
+    transform: translateY(-150px) scaleX(10); 
+    } 
+    } 
